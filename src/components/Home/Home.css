@@ -1,0 +1,22 @@
+.home_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  /* justify-content: center;
+  align-items: center; */
+}
+.grid_container {
+  /* width: 90%; */
+  padding: 1rem 2rem;
+}
+.grid_container P {
+  font-size: 24px;
+  font-family: "GothamMedium";
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .grid_container {
+    padding: 1rem 0.7rem;
+  }
+}
