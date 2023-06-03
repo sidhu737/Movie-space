@@ -4,7 +4,7 @@ const Shimmer = () => {
         <div className='cards'>
         <div className='cards_shimmer'>
             <div className="shimmer"></div>
-            <div className='shimmer_header'></div>
+            {/* <div className='shimmer_header'></div> */}
             {/* <div> */}
                 <div className='grid_box'>
 

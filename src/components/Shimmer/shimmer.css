@@ -17,13 +17,14 @@
         transform: translateX(100%);
     }
 }
+
 /* .cards{
     padding: 1em 0;
 } */
 
 .cards_shimmer {
-    padding: 1rem 2rem;
-    margin: 4em auto;
+    /* padding: 1rem 2rem; */
+    /* margin: 4em auto; */
     position: relative;
     overflow: hidden;
 }
@@ -36,21 +37,26 @@
 
 .shimmer_container {
     min-width: 240px;
-  min-height: 360px;
-  border-radius: 20px;
+    min-height: 360px;
+    border-radius: 20px;
     background-color: #bdc8d181;
 }
 
-.cards-shimmer section {
-    width: 5em;
-    height: 2em;
-    background-color: #bdc8d1b4;
-
-}
-.shimmer_header{
+.shimmer_header {
     width: 80vw;
     height: 2em;
     background-color: #bdc8d19a;
-    margin: 1em auto;
+    margin: 0.8em auto;
     border-radius: 20px;
+}
+
+ section {
+    width: 12em;
+    height: 3em;
+    background-color: #bdc8d1ac;
+    position: relative;
+    top: 18em;
+    margin: auto;
+    border-radius: 10px;
+    left: 0;
 }
