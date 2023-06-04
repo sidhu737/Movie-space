@@ -13,7 +13,6 @@ function GenreButtons({ paramValue, handleGenre }) {
       setGenreInfo(data["genres"]);
     });
   }, []);
-  console.log(genreInfo);
   return (
     <div className="genre_container">
       {genreInfo &&
