@@ -1,0 +1,25 @@
+.genre_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem 2rem 1rem;
+  gap: 1rem;
+}
+.genre_button {
+  background-color: rgb(48, 45, 45);
+  color: aliceblue;
+  font-weight: 500;
+  margin: 0.1rem 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  text-decoration-color: transparent;
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+}
+.genre_button:hover {
+  background-color: rgb(93, 13, 168);
+  text-decoration: underline;
+
+  transition: 0.3s ease-out;
+}

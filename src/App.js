@@ -13,13 +13,13 @@ import Shimmer from "./components/Shimmer/Homeshimmer";
 function App() {
   return (
     // <div className="bg-slate-400">
-      <div>
+    <div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/tvshows" element={<Shimmer />}></Route>
-        <Route path="/movies" element={<Shimmer/>}></Route>
+        <Route path="/tvshows" element={<TVShows />}></Route>
+        <Route path="/movies" element={<Movies />}></Route>
       </Routes>
     </div>
   );
