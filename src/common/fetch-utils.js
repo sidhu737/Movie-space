@@ -1,8 +1,8 @@
 import { apiEndpoint } from "./constants";
 
 const fetchUtil = (() => {
-  const request = (url) => {
-    const finalURL = `${apiEndpoint.url}${url}?${apiEndpoint.apiKey}`;
+  const request = (url, additionalurl) => {
+    const finalURL = `${apiEndpoint.url}${url}?${additionalurl}${apiEndpoint.apiKey}`;
     console.log(finalURL);
     return new Promise((resolve, reject) => {
       fetch(finalURL)
@@ -23,8 +23,8 @@ const fetchUtil = (() => {
     post: (url) => {
       return request(url);
     },
-    get: (url, dataName = {}) => {
-      return request(url, dataName);
+    get: (url, additionalurl = "") => {
+      return request(url, additionalurl);
     },
   };
 })();
