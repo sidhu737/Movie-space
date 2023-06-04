@@ -8,11 +8,15 @@ function MovieGrid({ apiends }) {
   useEffect(() => {
     const mdata = fetchUtil.get(apiends);
     mdata.then((data) => {
-      setGridData(data["results"]);
+      setTimeout(() => {
+        console.log('This will run after 1 second!')
+        setGridData(data["results"]);
+      }, 1500);
+      
     });
   }, []);
   console.log(gridData);
-  return  gridData.length === 0 ? <Shimmer/> :  (
+  return gridData.length === 0 ? <Shimmer /> : (
     <div className="grid_slider">
       {gridData &&
         gridData.map((data) => {
