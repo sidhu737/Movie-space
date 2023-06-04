@@ -21,8 +21,6 @@
 .genre_button:focus,
 .genre_button:hover {
   background-color: rgb(93, 13, 168);
-  text-decoration: underline;
-
   transition: 0.3s ease-out;
 }
 /* listing page styling from here */
@@ -43,6 +41,7 @@
   background-size: contain;
   box-shadow: inset 0px -20px 20px 20px #0000008c;
   border-radius: 20px;
+  cursor: pointer;
 }
 .list_card:hover {
   transform: translate3D(0, -1px, 0) scale(1.02); /*on hover to expand card effets*/
