@@ -1,0 +1,115 @@
+.slider {
+  width: 70%;
+  height: 55vh;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translate3D(-50%);
+  transition: all 0.5s ease;
+}
+.current {
+  opacity: 1;
+  transform: translateX(0);
+}
+.current .content {
+  opacity: 1;
+}
+@media screen and (min-width: 600px) {
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.content {
+  position: absolute;
+  bottom: 2rem;
+  margin-left: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-bottom: 1rem;
+  opacity: 0;
+  width: 35%;
+  animation: slide-up 1s ease 0.5s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+@keyframes slide-up {
+  0% {
+    visibility: visible;
+    bottom: 0.5rem;
+  }
+  100% {
+    visibility: visible;
+    bottom: 1rem;
+  }
+}
+.content > * {
+  color: #fff;
+}
+.content > span {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: 18px;
+  /* justify-content: center; */
+}
+.title {
+  font-size: 24px;
+  font-family: "GothamMedium";
+  padding: 1rem 0rem 0.5rem 1rem;
+}
+.rating-icon {
+  color: yellow;
+}
+.arrow {
+  background: rgba(0, 0, 0, 0.4);
+  color: rgb(255, 255, 255);
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  z-index: 1;
+  margin: 0 2px;
+  padding: 1px;
+}
+.content > hr {
+  height: 2px;
+  background-color: #fff;
+  width: 50%;
+}
+.arrow:hover {
+  color: #888;
+}
+.next {
+  right: 0;
+}
+@media screen and (max-width: 600px) {
+  .slider {
+    width: 96%;
+    height: 35vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+  .content {
+    width: 70%;
+    left: 10%;
+  }
+  .title {
+    font-size: 20px;
+    font-family: "GothamMedium";
+    padding: 0.5rem 0rem 0.2rem 0.5rem;
+  }
+}

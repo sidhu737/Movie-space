@@ -9,7 +9,7 @@ function TVShows() {
     popularParams: "tv/popular",
     genreParam: {
       mainparam: "discover/tv",
-      subparam: `with_genres=${genreID}&page=1&`,
+      subparam: `with_genres=${genreID}&language=en-US&page=1&`,
     },
   };
   return (
