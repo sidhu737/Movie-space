@@ -6,23 +6,23 @@ import { apiEndpoint } from "./constants";
 
 const MovieDetailPage = () => {
   const { id } = useParams();
-  const [Movieinfo, setMovieinfo] = useState('')
-  // const result = fetchUtil.get();
-
-
+  const [moviedata, setmoviedata] = useState('')
+  
+  const details= async()=> {
+    const result = fetchUtil.get(`movie/${id}`)
+    .then((data)=>{
+      setmoviedata(data)
+    }).catch((error)=>{
+      console.log(error.message+"details error")
+    })
+}
   useEffect(() => {
     details()
   }, [])
-  async function details() {
-    const fetchurl = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c13a3b6a16f4d71c66ffdc6d124c6851`)
-    const data = await fetchurl.json();
-    // console.log(data)
-    setMovieinfo(data)
-  }
-  console.log(Movieinfo.map((data)=>{
-    return data
-  }))
+
   console.log("MovieDetailPage: " + id)
+  console.log(moviedata.backdrop_path)
+  console.log(moviedata.budget)
   return (
     <div className="detail_page">
       <div className="bg_detail_page" style={{
