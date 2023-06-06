@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import fetchUtil from "../../common/fetch-utils";
 import MovieGrid from "./MovieGrid";
+import Banner from "./Banner";
 import "./Home.css";
 function Home() {
   const apiParams = [
@@ -11,6 +12,7 @@ function Home() {
   return (
     <div className="home_container">
       {/* Add a trending movie banner later */}
+      <Banner />
       <div className="grid_container">
         <p>Trending Movies</p>
         <MovieGrid apiends={apiParams[0]} />
