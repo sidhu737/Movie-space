@@ -5,71 +5,83 @@
   padding-top: 3rem;
   /* background-color: rgba(148, 163, 184, 0.7); */
 }
-.bg_detail_page{
-background-position: 0 10px;
-background-repeat: no-repeat;
-background-size: contain;
-background-position-x: right;
-position: relative;
+
+.bg_detail_page {
+  background-position: 0 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: right;
+  position: relative;
 }
-.bg_grad{
+
+.bg_grad {
   width: 100%;
-height: 100%;
-/* background: linear-gradient(to right, #000 0% 57%, #0000001a 100%); */
-background: linear-gradient(to right, #000, #000, #000, #000000, #050505da, #0303031f, #0000);
-/* #454545a3, #4f4f4f76, #59595950, #63636324, #6d6d6d00); */
-position: absolute;
-top: 0;
-left: 0;
+  height: 100%;
+  /* background: linear-gradient(to right, #000 0% 57%, #0000001a 100%); */
+  background: linear-gradient(to right, #000, #000, #000, #000000, #050505da, #0303031f, #0000);
+  /* #454545a3, #4f4f4f76, #59595950, #63636324, #6d6d6d00); */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.page_header{
+
+.page_header {
   max-width: 1350px;
-margin: 0 auto;
-position: relative;
+  margin: 0 auto;
+  position: relative;
 }
-.header_content{
+
+.header_content {
   flex-wrap: wrap;
   align-items: center;
   display: flex;
 }
-.left_content{
+
+.left_content {
   width: 322px;
-height: 301px;
-margin: 65px 0;
+  height: 301px;
+  margin: 65px 0;
 }
-.right_content{
+
+.right_content {
   color: white;
   margin: 9em 0 0 6em;
 }
-.original_title h1{
+
+.original_title h1 {
   font-size: 23px;
-line-height: 32px;
-font-weight: 700;
+  line-height: 32px;
+  font-weight: 700;
 
 }
-.movie_rating{
+
+.movie_rating {
   display: flex;
 
 }
-.movie_rating p{
+
+.movie_rating p {
   margin: 0.5em;
   font-weight: 600;
 }
-.movie_data{
+
+.movie_data {
   display: flex;
 }
-.movie_data p{
+
+.movie_data p {
   margin: 0.5em;
 }
+
 .movie_genres {
   display: flex;
 }
-.movie_genres p{
-  margin: 0.5em;
+
+.movie_genres p {
   border: solid 1px;
-padding: 7px 12px;
-border-radius: 22px;
-font-size: 14px;
-line-height: 23px;
-font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 22px;
+  font-size: 14px;
+  line-height: 23px;
+  font-weight: 600;
 }
