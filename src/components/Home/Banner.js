@@ -5,11 +5,26 @@ import { apiEndpoint } from "../../common/constants";
 import { AiOutlineCaretRight, AiOutlineCaretLeft } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai";
 const Banner = () => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [bannerData, setBannerData] = useState([]);
   const autoScroll = true;
   let slideInterval;
-  let intervalTime = 5000;
+  let intervalTime = 6000;
   useEffect(() => {
     const resultData = fetchUtil.get("movie/now_playing");
     resultData.then((data) => {
@@ -36,6 +51,10 @@ const Banner = () => {
     }
     return () => clearInterval(slideInterval);
   }, [currentSlide]);
+  const getDayMonth = (date) => {
+    const d = new Date(date);
+    return d.getDate() + "th " + months[d.getMonth()];
+  };
   return (
     <div className="slider">
       <AiOutlineCaretLeft className="arrow prev" onClick={prevSlide} />
@@ -52,12 +71,19 @@ const Banner = () => {
                 alt="banner image"
               />
               <div className="content">
-                <h2 className="title">{data.title}</h2>
-                <hr />
-                <span>
-                  Rating: {data.vote_average}
-                  <AiFillStar className="rating-icon" />
-                </span>
+                <div>
+                  <h1>Now Playing</h1>
+                  <h2 className="title">{data.title}</h2>
+                  <hr />
+                  <p className="releaseDate">
+                    Release date: {getDayMonth(data.release_date)}
+                  </p>
+                  <p className="overview">{data.overview}</p>
+                  <span>
+                    Rating: {data.vote_average}
+                    <AiFillStar className="rating-icon" />
+                  </span>
+                </div>
               </div>
             </>
           )}
