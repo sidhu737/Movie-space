@@ -18,7 +18,7 @@
   width: 100%;
   height: 100%;
   /* background: linear-gradient(to right, #000 0% 57%, #0000001a 100%); */
-  background: linear-gradient(to right, #000, #000, #000, #000000, #050505da, #0303031f, #0000);
+  background: linear-gradient(to right, #000, #000, #000, #000000, #050505c8, #03030336, #0000);
   /* #454545a3, #4f4f4f76, #59595950, #63636324, #6d6d6d00); */
   position: absolute;
   top: 0;
@@ -45,7 +45,7 @@
 
 .right_content {
   color: white;
-  margin: 9em 0 0 6em;
+  margin: 9em 0 0 4em;
 }
 
 .original_title h1 {
@@ -75,6 +75,7 @@
 
 .movie_genres {
   display: flex;
+  gap: 10px;
 }
 
 .movie_genres p {
@@ -84,4 +85,16 @@
   font-size: 14px;
   line-height: 23px;
   font-weight: 600;
+}
+
+
+.overview_details {
+  max-width: 1000px;
+  margin: 1em 2em 0 auto;
+  /* color: white; */
+}
+.overview_details h2{
+  font-size: 25px;
+letter-spacing: 0.015em;
+font-weight: 650;
 }

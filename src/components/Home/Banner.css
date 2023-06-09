@@ -1,11 +1,15 @@
+.slider_container {
+  margin: 0;
+}
+
 .slider {
-  width: 70%;
-  height: 55vh;
+  width: 100%;
+  height: 25em;
   position: relative;
   overflow: hidden;
-  margin: 0 auto;
-  border-radius: 30px;
+  margin: 0;
 }
+
 .slide {
   position: absolute;
   top: 0;
@@ -16,59 +20,70 @@
   transform: translate3D(-50%);
   transition: all 0.5s ease;
 }
+
 .current {
   opacity: 1;
   transform: translateX(0);
 }
+
 .current .content {
   opacity: 1;
 }
+
 @media screen and (min-width: 600px) {
   .slide img {
     width: 100%;
     height: 100%;
   }
 }
+
 .content {
   position: absolute;
   bottom: 2rem;
-  margin-left: 1rem;
+  margin-left: 8rem;
   background-color: rgba(0, 0, 0, 0.4);
-  padding-bottom: 1rem;
+  padding-bottom: 8rem;
   opacity: 0;
   width: 35%;
   animation: slide-up 1s ease 0.5s;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
+
 @keyframes slide-up {
   0% {
     visibility: visible;
     bottom: 0.5rem;
   }
+
   100% {
     visibility: visible;
     bottom: 1rem;
   }
 }
-.content > * {
+
+.content>* {
   color: #fff;
 }
-.content > span {
+
+.content>span {
   display: flex;
   align-items: center;
   padding-left: 1rem;
   font-size: 18px;
   /* justify-content: center; */
 }
+
 .title {
   font-size: 24px;
   font-family: "GothamMedium";
   padding: 1rem 0rem 0.5rem 1rem;
 }
+
 .rating-icon {
   color: yellow;
 }
+
 .arrow {
   background: rgba(0, 0, 0, 0.4);
   color: rgb(255, 255, 255);
@@ -81,17 +96,21 @@
   margin: 0 2px;
   padding: 1px;
 }
-.content > hr {
+
+.content>hr {
   height: 2px;
   background-color: #fff;
   width: 50%;
 }
+
 .arrow:hover {
   color: #888;
 }
+
 .next {
   right: 0;
 }
+
 @media screen and (max-width: 600px) {
   .slider {
     width: 96%;
@@ -99,17 +118,38 @@
     position: relative;
     overflow: hidden;
   }
+
   .slide img {
     width: 100%;
     height: 100%;
   }
+
   .content {
     width: 70%;
     left: 10%;
   }
+
   .title {
     font-size: 20px;
     font-family: "GothamMedium";
     padding: 0.5rem 0rem 0.2rem 0.5rem;
   }
+}
+
+.bg_imgslider {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: right;
+  transition: all ease-in 1000ms;
+  height: 100%;
+
+}
+
+.slider_bg {
+  background: linear-gradient(to right, #000, #000, #000, #000000, #050505c8, #03030336, #0000);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

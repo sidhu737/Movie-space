@@ -39,7 +39,7 @@
     min-width: 240px;
     min-height: 360px;
     border-radius: 20px;
-    background-color: #bdc8d181;
+    background-color: #18191bc9;
 }
 
 .shimmer_header {
@@ -53,7 +53,7 @@
  section {
     width: 12em;
     height: 1.2em;
-    background-color: #bdc8d1ac;
+    background-color: #1e1f20b2;
     position: relative;
     top: 18em;
     margin: 0.6em auto;
