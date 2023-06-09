@@ -28,7 +28,7 @@ const Banner = () => {
   useEffect(() => {
     const resultData = fetchUtil.get("movie/now_playing");
     resultData.then((data) => {
-      setBannerData(data["results"].slice(0, 4));
+      setBannerData(data["results"].slice(0,4));
     });
     setCurrentSlide(0);
   }, []);
@@ -71,14 +71,14 @@ const Banner = () => {
                 alt="banner image"
               />
               <div className="content">
-                <div>
+                <div className="slider_details">
                   <h1>Now Playing</h1>
                   <h2 className="title">{data.title}</h2>
                   <hr />
                   <p className="releaseDate">
                     Release date: {getDayMonth(data.release_date)}
                   </p>
-                  <p className="overview">{data.overview}</p>
+                  {/* <p className="overview">{data.overview}</p> */}
                   <span>
                     Rating: {data.vote_average}
                     <AiFillStar className="rating-icon" />
