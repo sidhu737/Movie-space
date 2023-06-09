@@ -56,23 +56,20 @@ const Banner = () => {
     return d.getDate() + "th " + months[d.getMonth()];
   };
   return (
-    <div className="slider_container">
     <div className="slider">
       <AiOutlineCaretLeft className="arrow prev" onClick={prevSlide} />
       <AiOutlineCaretRight className="arrow next" onClick={nextSlide} />
       {bannerData.map((data, index) => (
         <div
-        className={index === currentSlide ? "slide current" : "slide"}
-        key={index}
+          className={index === currentSlide ? "slide current" : "slide"}
+          key={index}
         >
           {index === currentSlide && (
             <>
-              {/* <img
+              <img
                 src={`https://image.tmdb.org/t/p/original${data["backdrop_path"]}`}
                 alt="banner image"
-              /> */}
-              <div className="bg_imgslider" style={{backgroundImage:`url(https://image.tmdb.org/t/p/original${data["backdrop_path"]})`}}>
-            <div className="slider_bg"></div>
+              />
               <div className="content">
                 <div>
                   <h1>Now Playing</h1>
@@ -88,12 +85,10 @@ const Banner = () => {
                   </span>
                 </div>
               </div>
-              </div>
             </>
           )}
         </div>
       ))}
-    </div>
     </div>
   );
 };
